@@ -1,0 +1,8 @@
+:root{
+  --bg-primary: #282a36;
+ }
+
+.App {
+  background-color: var(--bg-primary) ;
+}
+

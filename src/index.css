@@ -1,0 +1,85 @@
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.section-padding{
+  padding: 40px 0;
+}
+
+.title{
+  font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    line-height: 1.4;
+}
+
+button.default-btn{
+  padding: .5rem 2rem;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+button.default-btn:hover{
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.profile .accordion{
+  border: 0;
+  border-radius: 0;
+}
+.profile .accordion-item{
+  background: #ccc;
+    color: #000;
+    border-radius: 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.profile .accordion-button{
+  background: #6c757d;
+    color: #fff;
+}
+.profile .accordion-button:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+.profile .accordion-button:not(.collapsed){
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.testimonials .card{
+  max-width: 80%;
+  margin: auto;
+}
+.contact ul li{
+  color: #fff;
+}
+
+a{
+  text-decoration: none !important;
+  color: #fff !important;
+}
