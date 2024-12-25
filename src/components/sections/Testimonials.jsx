@@ -5,27 +5,28 @@ import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 import CardUi from "../UI/CardUi";
 import axios from "axios";
-import {Data} from '../Data/data'
+// import {Data} from '../Data/data'
 
 const Testimonials = () => {
-  const [testimonials, setTestimonials] = useState(Data);
+  const [testimonials, setTestimonials] = useState([]);
 
-//   const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
 
-//   const fetchTestimonials = async () => {
-//     const apiUrl = "https://tmits.in/testimonialapi";
+  const fetchTestimonials = async () => {
+    const apiUrl = "https://api.potterdb.com/v1/movies";
 
-//     try {
-//       const response = await axios.get(apiUrl);
-//       setTestimonials(response.data);
-//     } catch (err) {
-//       setError(err.message);
-//     }
-//   };
+    try {
+      const response = await axios.get(apiUrl);
+      let content = await response.data.data;
+      setTestimonials(content);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
 
-//   useEffect(() => {
-//     fetchTestimonials();
-//   }, []);
+  useEffect(() => {
+    fetchTestimonials();
+  }, []);
 
   return (
     <>
@@ -37,7 +38,7 @@ const Testimonials = () => {
                 {testimonials.map((item) => {
                   return (
                     <Carousel.Item key={item.id}>
-                      <CardUi title={item.name}>{item.testimonial}</CardUi>
+                      <CardUi title={item.attributes.release_date}>{item.attributes.title}</CardUi>
                     </Carousel.Item>
                   );
                 })}

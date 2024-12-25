@@ -10,8 +10,9 @@ const Contact = () => {
       <Container>
         <Row>
           <Col lg="6" className="mb-lg-0 mb-4">
-          
-        <h1 className="title">Contact</h1>
+            <div className="title">
+              <h1 className="gradient-text">Contact</h1>
+            </div>
             <ul className="mb-2 list-unstyled">
               <li>Address: Connaught Place, New Delhi, India.</li>
               <li>
@@ -22,10 +23,10 @@ const Contact = () => {
                 Phone: <a href="tel:+91 1234567890">+91 1234567890'</a>
               </li>
             </ul>
-            <ContactForm/>
+            <ContactForm />
           </Col>
           <Col lg={6}>
-          <GoogleMap/>
+            <GoogleMap />
           </Col>
         </Row>
       </Container>
